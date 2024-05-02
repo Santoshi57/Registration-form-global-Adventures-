@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Adventures Questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="img/logo-removebg-preview.png" alt="Global Adventures Logo">
+        <h1>Custom Travel Package Questionnaire</h1>
+    </header>
+
+    <main>
+        <form id="travelForm" method="POST" action="https://tau.usq.edu.au/courses/CSC8740/reflect">
+            <!-- Section 1: Personal Information -->
+            <section id="personalInfoSection" class="formSection">
+                <h2>Personal Information</h2>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"  placeholder="Full Name" required>
+                </div>
+                <div>
+                    <label for="birthDate">Birth Date:</label>
+                    <input type="date" id="birthDate" name="birthDate" required>
+                </div>
+                <div>
+                    <label for="name">Email Address</label>
+                    <input type="text" id="email" name="name" placeholder="Enter your email address" required>
+                </div>
+                <div>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="occupation">Occupation:</label>
+                    <input type="text" id="occupation" name="occupation">
+                </div>
+                <div>
+                    <label for="dietaryRequirements">Dietary Requirements:</label>
+                    <select id="dietaryRequirements" name="dietaryRequirements" required>
+                        <option value="">Select</option>
+                        <option value="vegetraian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="halal">Halal</option>
+                        <option value="kosher">Kosher</option>
+                        <option value="allergies">Allergies</option>
+                        <option value="other">Others</option>
+
+                    </select>
+                </div>
+                <div>
+                    <label for="specialNeeds">Special Needs?</label>
+                    <input type="text" id="specialNeeds" name="specialNeeds">
+                </div>
+                <div>
+                    <label for="preferredDates">Preferred Travel Dates:</label>
+                    <input type="date" id="preferredDates" name="preferredDates">
+                    <input type="date" id="preferredDates" name="preferredDates">
+                </div>
+                <div>
+                    <label> <input type="checkbox" id="partner" name="partner">Travelling with Partner?</label>
+                   <input type="text" id="partner" name="partner"placeholder="Enter names">
+                </div>
+                <div>
+                    <label><input type="checkbox" id="children" name="children">Travelling with Children?</label>
+                </div>
+                <div>
+                    <label><input type="text" id="children" name="children" placeholder="how many?"></label>
+                  
+
+                </div>
+                <div>
+                    <label><input type="checkbox" id="friends" name="friends">Travelling with Friends?</label>
+                    <input type="text" id="friends" name="friends"placeholder="Enter Name">
+                </div>
+                <button type="button" id="nextButton">Next</button>
+            </section>
+
+            <!-- Section 2: Travel Preferences -->
+            <section id="travelPrefsSection" class="formSection">
+                <h2>Travel Preferences</h2>
+                <div>
+                    <label for="activityLevel">How active ?</label>
+                    <select id="activityLevel" name="activityLevel">
+                        <option value="active">Want to be travelling all the time?</option>
+                        <option value="restDays">Need rest days?</option>
+                        <option value="restDaysFrequency">Rest days how often?</option>
+                        <option value="strenuousActivities">Enjoy strenuous activities?</option>
+                        <option value="sedentary">Sedentary?</option>
+                    </select>
+                </div>
+
+                <div id="restDaysFrequencyInput">
+                    <label for="restDaysFrequency">Rest days how often?</label>
+                    <input type="text" id="restDaysFrequency" name="restDaysFrequency">
+                </div>
+
+                <div id="accommodationPreferencesInput" >
+                    <label for="accommodationPreferences">Preferred accommodation:</label>
+                    <select id="accommodationPreferences" name="accommodationPreferences">
+                        <option value="hotel">Hotel</option>
+                        <option value="motel">Motel</option>
+                        <option value="bnb">Bed & Breakfast</option>
+                        <option value="airbnb">Airbnb</option>
+                        <option value="studentAccommodation">Student Accommodation</option>
+                        <option value="camping">Camping</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div id="modesOfTravelInput">
+                    <label for="modesOfTravel">Preferred modes of travel:</label>
+                    <label> <input type="checkbox" id="air" name="modesOfTravel" value="air">Air (jet, turbo-prop, helicopter...)</label>
+                    <label><input type="checkbox" id="water" name="modesOfTravel" value="water">Water (cruise, sail, barge...)</label>
+                    <label><input type="checkbox" id="train" name="modesOfTravel" value="train">Train</label>
+                    <label ><input type="checkbox" id="bus" name="modesOfTravel" value="bus">Bus</label>
+                    <label><input type="checkbox" id="bicycle" name="modesOfTravel" value="bicycle">Bicycle</label>
+                    <label><input type="checkbox" id="horse" name="modesOfTravel" value="horse">Horse</label>
+                    <label><input type="checkbox" id="donkey" name="modesOfTravel" value="donkey">Donkey</label>
+                    <label><input type="checkbox" id="mule" name="modesOfTravel" value="mule">Mule</label>
+                    <label><input type="checkbox" id="camel" name="modesOfTravel" value="camel">Camel</label>
+                    <label><input type="checkbox" id="walking" name="modesOfTravel" value="walking">Walking</label>
+                    <label><input type="checkbox" id="others" name="modesOfTravel" value="others">Others</label>
+                    
+                </div>
+
+                <div id="travelEnvironmentsInput">
+                    <label for="travelEnvironments">Preferred Travel Environments:</label>
+                   
+                    <label > <input type="checkbox" id="cities" name="travelEnvironments" value="cities">Cities</label>
+                    <label><input type="checkbox" id="country" name="travelEnvironments" value="country">Country</label>
+                    <label><input type="checkbox" id="natural" name="travelEnvironments" value="natural">Natural</label>
+                    <label><input type="checkbox" id="mountains" name="travelEnvironments" value="mountains">Mountains</label>
+                    <label><input type="checkbox" id="deserts" name="travelEnvironments" value="desert">Deserts</label>
+                    <label><input type="checkbox" id="forest" name="travelEnvironments" value="forest">Rain Forest</label>
+                    <label><input type="checkbox" id="sea" name="travelEnvironments" value="sea">Sea</label>
+                    <label><input type="checkbox" id="coastel" name="travelEnvironments" value="coastel">Coastal</label>
+                    <label><input type="checkbox" id="inlans" name="travelEnvironments" value="inlans">Inland</label>
+                </div>
+
+                    <div id="travelEnvironmentsInput">
+                        <label for="travelEnvironments">Preferred Destinations:</label>  
+                    <select id="country" name="country" required>
+                        <option value="">Select</option>
+                        <option value="africa">Africa</option>
+                        <option value="asia">Asia</option>
+                        <option value="central america">Central America</option>
+                        <option value="europe">Europe</option>
+                        <option value="EuropeanUnion">Eurpean Union</option>
+                        <option value="Middle East">Middle East</option>
+                        <option value="North America">North America</option>
+                        <option value="Oceania">Oceania</option>
+                        <option value="south america">South America</option>
+                        <option value="the caribbean">The Caribbean</option>
+                    
+                    
+                    </select>
+                   
+                </div>
+
+                <button type="button" id="prevButton">Previous</button>
+                <button type="button" id="nextButton2">Next</button>
+            </section>
+
+            <!-- Section 3: Budget and Accommodation -->
+            <section id="budgetAccommodationSection" class="formSection" >
+                <h2>Budget and Accommodation</h2>
+                <div>
+                    <label for="budgetRange">Budget Range:</label>
+                    <select id="budgetRange" name="budgetRange">
+                        <option value="">Select Budget Range</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <div id="activityPreferencesInput">
+                    <label for="activityPreferences">Activity Preferences:</label>
+                    <textarea id="activityPreferences" name="activityPreferences" required></textarea>
+                </div>
+                <div id="activityPreferencesInput">
+                    <label for="activityPreferences">Any Messages:</label>
+                    <textarea id="activityPreferences" name="activityPreferences"option></textarea>
+                </div>
+
+
+                <button type="button" id="prevButton2">Previous</button>
+                <button type="submit">Submit</button>
+            </section>
+        </form>
+    </main>
+</body>
+</html>
